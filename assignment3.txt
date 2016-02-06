@@ -1,0 +1,58 @@
+var index=0;
+function Arraylist() {
+	
+	this.arr = [3,2,7,1];
+    return arr;
+
+}
+Arraylist.prototype.add = function (no){
+	this.arr.push(no);
+}
+Arraylist.prototype.delete = function(no){
+	this.arr.pop(no);
+}
+Arraylist.prototype.reverse = function(){
+	this.arr.reverse();
+}
+
+Arraylist.prototype.sort = function(){
+	this.arr.sort();
+	
+}
+Arraylist.prototype.get = function(index){
+	if(index < this.arr.length){
+		return this.arr[index];
+	} else {
+		console.log("no index found");
+	}
+}
+
+Arraylist.prototype.update = function(index,val){
+		if(index<this.arr.length){
+      		 this.arr[index]=val;
+       		return this.arr;
+   		} else {
+    		this.arr.push(val);
+    		return this.arr;
+  		}
+	 } 
+
+var arr = new Arraylist();
+ arr.add(6);
+ arr.add(5);
+ arr.add(7);
+ console.log(arr);
+
+arr.delete();
+console.log(arr);
+
+arr.reverse();
+console.log(arr);
+
+arr.sort();
+console.log(arr);
+
+console.log("array index is",+arr.get(2));
+
+arr.update(2,8);
+console.log(arr);

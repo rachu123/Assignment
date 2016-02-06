@@ -1,0 +1,44 @@
+Factorial 
+
+function fact(num)
+{
+    if (num === 0)
+      { return 1; }
+    else
+      { return num * fact( num - 1 ); }
+}
+
+
+
+
+Palindrome
+
+function palindrome(str){
+    for (var i = 0; i <= str.length; i++){ 
+        if  (str[i] !== str[str.length - 1 - i]) {
+            return "The string is not a palindrome";
+        }
+    }
+return "The string IS a palindrome"
+}
+
+
+
+
+fibonnaci
+
+var i=0,j=1,k,x;
+ function fib(mnum){
+ 	   console.log("fibonnaci series is->");
+       console.log(i,j);
+       
+    for(k=1; k<mnum-1;k++ ){
+        
+         x=i+j;
+         i=j;
+         j=x;
+         console.log(x);
+        
+    }
+}
+console.log(fib(4));
